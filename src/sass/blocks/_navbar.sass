@@ -12,30 +12,33 @@
     display: flex
     flex-direction: column 
     font-size: 13px
-    font-weight: 500 
   &__button
     margin-left: 30px
     font-size: 13px
-    font-weight: 600
+    +bold
   &__phone
     display: inline-block
     color: $text-color
     font-size: 20px
-    font-weight: 600
     text-decoration: none
     margin-top: 9px
+    +bold
+@media (max-width: 992px) 
+  .navbar
+    &__contacts
+      a 
+        font-size: 18px  
+        font-weight: 600
+    &__button
+      font-size: 10px
+      padding: 15px 26px   
+
 @media (max-width: 768px) 
   .navbar
     &__contacts
-      display-text: none
-      span 
-        font-size: 10px
-        font-weight: 500 
-      a 
-        font-size: 15px  
-        font-weight: 600
+      display: none
     &__button
-      font-size: 12px
+      font-size: 10px
       padding: 15px 26px 
     &__logo
       width: 120px  
@@ -51,13 +54,14 @@
 @media (max-width: 420px)
   .navbar
     margin-top: 8px
-    margin-left: 5px
+    margin-left: 3px
     &__contacts
       display: none
     &__button
       font-size: 10px
       font-weight: 600
       padding: 15px 26px
-      margin-right: 7px
+      margin-right: 5px
+      margin-bottom: 2px
     &__logo
       width: 90px  

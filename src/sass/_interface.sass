@@ -1,5 +1,5 @@
 body 
-  font-family: sans-serif
+  +reg
 img 
    max-width: 100% 
 .container
@@ -7,23 +7,23 @@ img
   margin: auto
 @media (max-width: 1200px) 
   .container 
-    width: 992px
-    width: 90%
+    max-width: 992px
+    width: 100%
 @media (max-width: 992px)   
-    .container 
-    width: 768px
-    width: 90%  
+  .container 
+    max-width: 730px
+    width: 95%  
 @media (max-width: 768px) 
   .container 
-    max-width: 567px    
-    width: 90%    
+    max-width: 520px    
+    width: 95%    
 @media (max-width: 567px) 
   .container 
-    max-width: 420px    
-    width: 90%
+    max-width: 400px    
+    width: 95%
 @media (max-width: 420px)
-    .container 
-    max-width: 320px    
+  .container 
+    max-width: 280px    
     width: 90%
 .button
   border-radius: 10px

@@ -1,5 +1,22 @@
+@font-face {
+  font-family: 'Museo Sans Light';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Bold';
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Museo Sans Light', sans-serif;
+  font-weight: 300;
 }
 
 img {
@@ -13,33 +30,37 @@ img {
 
 @media (max-width: 1200px) {
   .container {
-    width: 992px;
-    width: 90%;
+    max-width: 992px;
+    width: 100%;
   }
 }
 
 @media (max-width: 992px) {
-  width: 768px;
-  width: 90%;
+  .container {
+    max-width: 730px;
+    width: 95%;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 567px;
-    width: 90%;
+    max-width: 520px;
+    width: 95%;
   }
 }
 
 @media (max-width: 567px) {
   .container {
-    max-width: 420px;
-    width: 90%;
+    max-width: 400px;
+    width: 95%;
   }
 }
 
 @media (max-width: 420px) {
-  max-width: 320px;
-  width: 90%;
+  .container {
+    max-width: 280px;
+    width: 90%;
+  }
 }
 
 .button {
@@ -84,38 +105,42 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 13px;
-  font-weight: 500;
 }
 
 .navbar__button {
   margin-left: 30px;
   font-size: 13px;
-  font-weight: 600;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .navbar__phone {
   display: inline-block;
   color: #333333;
   font-size: 20px;
-  font-weight: 600;
   text-decoration: none;
   margin-top: 9px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 992px) {
+  .navbar__contacts a {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .navbar__button {
+    font-size: 10px;
+    padding: 15px 26px;
+  }
 }
 
 @media (max-width: 768px) {
   .navbar__contacts {
-    display-text: none;
-  }
-  .navbar__contacts span {
-    font-size: 10px;
-    font-weight: 500;
-  }
-  .navbar__contacts a {
-    font-size: 15px;
-    font-weight: 600;
+    display: none;
   }
   .navbar__button {
-    font-size: 12px;
+    font-size: 10px;
     padding: 15px 26px;
   }
   .navbar__logo {
@@ -139,7 +164,7 @@ img {
 @media (max-width: 420px) {
   .navbar {
     margin-top: 8px;
-    margin-left: 5px;
+    margin-left: 3px;
   }
   .navbar__contacts {
     display: none;
@@ -148,7 +173,8 @@ img {
     font-size: 10px;
     font-weight: 600;
     padding: 15px 26px;
-    margin-right: 7px;
+    margin-right: 5px;
+    margin-bottom: 2px;
   }
   .navbar__logo {
     width: 90px;
@@ -180,16 +206,18 @@ img {
 
 .hero-text__title {
   font-size: 41px;
-  font-weight: 700;
   line-height: 55px;
   margin-bottom: 37px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .hero-text__subtitle {
   font-size: 20px;
-  font-weight: 600;
   display: inline-block;
   margin-bottom: 70px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 
 .hero-list {
@@ -204,7 +232,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 27px;
+  margin-bottom: 23px;
 }
 
 .hero-list__image {
@@ -225,7 +253,9 @@ img {
 }
 
 .hero-list__text {
-  max-width: 300px;
+  font-size: 14px;
+  max-width: 240px;
+  line-height: 24px;
 }
 
 @media (max-width: 1200px) {
@@ -238,6 +268,9 @@ img {
 }
 
 @media (max-width: 992px) {
+  .hero-text__title {
+    font-size: 34px;
+  }
   .hero-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -269,21 +302,37 @@ img {
 }
 
 @media (max-width: 420px) {
+  .container {
+    margin: auto;
+  }
   .hero {
-    padding-top: 30px;
+    padding-top: 33px;
   }
   .hero-text {
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .hero-text__title {
-    font-weight: 500;
-    margin-bottom: 0;
+    line-height: 1.2;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    width: 275px;
   }
   .hero-image {
-    margin-left: 10px;
+    margin: auto;
   }
   .hero-list {
     margin-bottom: 35px;
+    width: 320px;
+  }
+  .hero-list__item {
+    margin-bottom: 20px;
+  }
+  .hero-list__text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 200px;
   }
   .hero-list__image {
     width: 36px;
